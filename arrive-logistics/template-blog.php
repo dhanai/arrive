@@ -44,7 +44,7 @@
                                 <?php foreach( $categories as $categorys ) { ?><?php echo $categorys->name.' ' ?><?php } ?>
                             </div><!--post cat-->
                             <h4><?php the_title() ?></h4>
-                            <span class="post-date"><?php the_time('M y'); ?></span>
+                            <span class="post-date"><?php the_time('M d, Y'); ?></span>
                         </div><!--post content-->
                     </a>
                 </div>

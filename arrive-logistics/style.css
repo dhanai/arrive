@@ -849,10 +849,10 @@ span#homepage-first-scroll-section {
   transition: opacity 1s ease-in-out;
 }
 
-.home .our-feature-area{
+/*.home .our-feature-area{
   text-align: center;
 }
-
+*/
 .home .banner-headline {
     font-size: 10rem;
     max-width: 900px;
