@@ -175,7 +175,7 @@ jQuery(window).scroll(function($){
     var opacity;
     var translate;
 
-    if( offset <= fadeStart ){
+    if( offset <= fadeStart-1 ){
       opacity = 1;
     }else if( offset >= fadeStart && offset <= fadeUntil ){
       opacity = 0 + (offset - fadeStart) / (fadeUntil - fadeStart);
