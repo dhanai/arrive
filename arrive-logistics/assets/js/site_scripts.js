@@ -125,6 +125,16 @@ jQuery(document).ready(function($) {
         }, 700);
         event.preventDefault();
     });
+
+
+    //animate logo
+    setTimeout(function(){
+      $('.logo-mark').removeClass('hide');
+    }, 1000);
+    setTimeout(function(){
+      $('.logo-type').removeClass('hide');
+    }, 1500)
+    
 });
 
 // var slideCounter = function(){
@@ -141,23 +151,51 @@ scrollTop() >= 300
 Should be equal the the height of the header
 ========================================== */
 jQuery(window).scroll(function($){
-    if (jQuery(window).scrollTop() >= 120) {
-        jQuery('header').addClass('unfixed-header');
-    }
-    else {
-        jQuery('header').removeClass('unfixed-header');
-    }
-});
+    // if (jQuery(window).scrollTop() >= 350) {
+    //     jQuery('header').addClass('unfixed-header');
+    // }
+    // else {
+    //     jQuery('header').removeClass('unfixed-header');
+    // }
 
-jQuery(window).scroll(function($){
-    if (jQuery(window).scrollTop() >= 400) {
+    if (jQuery(window).scrollTop() >= 200) {
         jQuery('header').addClass('fixed-header');
-        jQuery('header').removeClass('unfixed-header');
+        //jQuery('header').removeClass('unfixed-header');
     }
     else {
         jQuery('header').removeClass('fixed-header');
         
     }
+
+    var fadeStart = 200;
+    var fadeUntil = 300;
+    var fading = jQuery('header');
+    var logo = document.getElementById('logo-mark');
+    var offset = jQuery(document).scrollTop();
+    var opacity;
+    var translate;
+
+    if( offset <= fadeStart ){
+      opacity = 1;
+    }else if( offset >= fadeStart && offset <= fadeUntil ){
+      opacity = 0 + (offset - fadeStart) / (fadeUntil - fadeStart);
+    }else if( offset > fadeUntil){
+      opacity = 1;
+    }
+
+    var translateStart = 0;
+    var translateUntil = 200;
+
+    if( offset <= translateStart ){
+      translate = 0;
+    }else if( offset>= translateStart && offset <= translateUntil ){
+      translate = (0 + (offset - translateStart) / (translateUntil - translateStart)) * 20;
+    }
+
+    fading.css('opacity',opacity);
+    logo.style.transform = "translateY(-"+translate+"px)";
+
+
 });
 
 var mapOn = false;
@@ -242,8 +280,10 @@ jQuery(document).ready(function($) {
     array.shift();
   }
 
-  displayOptions('option-locations', opLocations);
-  displayOptions('option-departments', opDepartments);
+  if($('.page-template-template-careers').length >= 1){
+    displayOptions('option-locations', opLocations);
+    displayOptions('option-departments', opDepartments);
+  }
 
   //filter careers  
   var $container = $('#container'),

@@ -648,14 +648,14 @@ header.fixed-header {
     position: fixed;
     background-color: #ffffff;
     top: 0;
-    opacity: 1;
+    opacity: 0;
     z-index: 9;
-      box-sizing: border-box;
-	-webkit-transition: opacity .4s ease-in-out;
+    box-sizing: border-box;
+	/*-webkit-transition: opacity .4s ease-in-out;
 	-moz-transition: opacity .4s ease-in-out;
 	-ms-transition: opacity .4s ease-in-out;
 	-o-transition: opacity .4s ease-in-out;
-	transition: opacity .4s ease-in-out;
+	transition: opacity .4s ease-in-out;*/
 }
 .fixed-header .white-logo, .fixed-header .colored-logo, .fixed-header.header-banner-img .white-logo {
     display: none;
@@ -684,8 +684,56 @@ header {
 	float: left;
 	width: 240px;
 }
+/*.header-banner-img.unfixed-header .white-logo .logo-mark{
+  transform: translateY(-20px);
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}*/
 .header-banner-img .white-logo {
     display: block;
+}
+.header-banner-img .white-logo .logo-mark,
+.header-banner-img .white-logo .logo-type{
+  overflow: hidden;
+  float: left;
+}
+.header-banner-img .white-logo .logo-mark img,
+.header-banner-img .white-logo .logo-type img{
+  min-width: 240px;
+}
+.header-banner-img .white-logo .logo-mark{
+  width: 64px;
+  position: fixed;
+}
+.header-banner-img .white-logo .logo-mark img{
+  opacity: 1;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+.header-banner-img .white-logo .logo-mark.hide img{
+  opacity: 0;
+}
+.header-banner-img .white-logo .logo-type{
+  width: 176px;
+  margin-left: 64px;
+}
+.header-banner-img .white-logo .logo-type img{
+  margin-left: -64px;
+  transform: translateX(0);
+  -webkit-transition: all .75s ease-out;
+  -moz-transition: all .75s ease-out;
+  -ms-transition: all .75s ease-out;
+  -o-transition: all .75s ease-out;
+  transition: all .75s ease-out;
+}
+.header-banner-img .white-logo .logo-type.hide img{
+  transform: translateX(-100%);
 }
 .header-banner-img .colored-logo {
     display: none;

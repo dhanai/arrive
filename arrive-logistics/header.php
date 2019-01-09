@@ -62,7 +62,14 @@ var templateUrl = '<?= get_bloginfo("template_url"); ?>';
     <div class="inner-header">
         <div class="logo">
             <a href="<?php echo home_url(); ?>" class="colored-logo"><img src="<?php the_field( 'logo','option'); ?>" alt="Logo"></a>
-            <a href="<?php echo home_url(); ?>" class="white-logo"><img src="<?php the_field( 'white_logo','option'); ?>" alt="Logo"></a>
+            <a href="<?php echo home_url(); ?>" class="white-logo">
+                <div id="logo-mark" class="logo-mark hide">
+                    <img src="<?php the_field( 'white_logo','option'); ?>" alt="Logo">
+                </div>
+                <div class="logo-type hide">
+                    <img src="<?php the_field( 'white_logo','option'); ?>" alt="Logo">
+                </div>
+            </a>
             <a href="<?php echo home_url(); ?>" class="sticky-logo"><img src="<?php the_field( 'sticky_logo','option'); ?>" alt="Logo"></a>
         </div><!--logo-->
         <div class="request-btn d-hide">
