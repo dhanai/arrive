@@ -28,7 +28,8 @@
         query_posts(array(
             'post_type' =>'post',
             'posts_per_page' => -1,
-            'paged' => $paged
+            'paged' => $paged,
+            'ignore_sticky_posts' => 1
         )); 
     ?>
     <?php if (have_posts()) : while (have_posts()) : the_post();   ?>

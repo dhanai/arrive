@@ -471,7 +471,8 @@ Layout Styling
 	padding: 13rem 0 12rem 0;
     display: block;
 } 
-.single .page-wrapper{
+.single .page-wrapper,
+.page .page-wrapper{
 	padding-top: 0px;
 }
 .heading {
@@ -498,7 +499,7 @@ Layout Styling
 }
 .intro-text {
 	font-size: 3.4rem;
-	padding: 3rem 0 8.8rem 0;
+	padding: 0 0 8.8rem 0;
 }
 .page-wrapper a {
 	border-bottom: 1px solid #2aaae2; 
@@ -2079,7 +2080,10 @@ span.post-date {
 Careers
 ********************************************************/
 
-.page-template-template-careers .white-logo {
+.page-template-template-careers .white-logo,
+.page-template-template-blog .white-logo,
+.post-template-default .white-logo,
+.page-template-default .white-logo {
   display: none;
 }
 
@@ -2413,6 +2417,10 @@ Single Resource
     widows: 100%;
     height: 775px;
 }
+.resource-meta{
+  padding-bottom: 3rem;
+}
+
 .resource-meta ul {
     margin: 0;
     padding: 0;
@@ -2652,7 +2660,7 @@ input[type="text"], .wpcf7-text, input[type="password"], .input-comments, .wpcf7
 	color: #b5b5b5;
 	outline: none;
 	padding: 0 17px;
-	margin: 0 0 20px 0;
+	margin: 0 0 8px 0;
 	font-family: 'Proxima-Nova-Light', Arial, Helvetica, sans-serif;
 	font-weight:400;
 	font-size: 20px;
