@@ -32,7 +32,30 @@
     </div>
         <!-- /.technology-page-accordion -->
         
-        
+      
+    
+    <div class="our-feature-area">
+                	<div class="wrapper">
+                       <div class="our-main-features feature-hoverd-container">
+                       <?php $cnt=0; if( have_rows('tp_service_bullet') ):  while ( have_rows('tp_service_bullet') ) : the_row(); $cnt++; ?>
+                            <div class="our-feature">
+                                <div class="our-feature-icon"><img src="<?php the_sub_field('bullet_icon'); ?>" alt=""></div>
+                                <div class="our-feature-title"><?php the_sub_field('bullet_title'); ?></div>
+                                <div class="feature-info">Info</div>
+                                <div class="feature-hover-content">
+                                	<div class="our-feature-icon"><img src="<?php the_sub_field('bullet_icon'); ?>" alt=""></div>
+                                    <div class="our-feature-title"><?php the_sub_field('bullet_title'); ?></div>
+                                    <p><?php the_sub_field('section_text'); ?></p>
+                                </div><!--feature-hover-contet-->
+                            </div><!-- /.our-feature -->
+                            <?php endwhile;endif;wp_reset_postdata(); ?>    
+                            <div class="clear"></div>
+                        </div>
+           <!-- /.our-main-features -->
+           </div><!--wrapper-->
+        </div><!-- /.our-feature area -->
+    
+    
         
         
     </section>

@@ -2,7 +2,6 @@
 /* Template Name: About Page */
  get_header();
 ?>
-
 <section class="section-mrg">
     <div class="we-work-with d-hide">
        <ul>
@@ -42,7 +41,7 @@
            <div id="example-one">
             <div class="video-area what-our-value-box">
             	<?php $cunt=0; if( have_rows('apsb_value_bullets') ):  while ( have_rows('apsb_value_bullets') ) : the_row(); $cunt++; ?>
-                 <div id="feature<?php echo $cunt; ?>" class="video-box small-box <?php if($cunt!=1){ ?>hide<?php } ?>" style="background-image: url(<?php the_sub_field('image'); ?>);">
+                 <div id="feature<?php echo $cunt; ?>" class="video-box small-box <?php if($cunt!=1){ ?>hide-tabs<?php } ?>" style="background-image: url(<?php the_sub_field('image'); ?>);">
                  <?php if(get_sub_field('video_url')){ ?>
                     <a href="<?php the_sub_field('video_url'); ?>" class="mfp-iframe"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/play-icon.png" alt="Play Video Icon"></a><?php } ?>
                 </div><!--video box-->
@@ -62,6 +61,7 @@
             </div>
         </div><!--big wrapper-->
     </section>
+
 <section class="section-mrg" id="about-team-section" style="display: none;">
     <div class="wrapper">
         <h2 class="section-headline"><?php the_field('tb_headline'); ?></h2>
@@ -114,7 +114,7 @@
        </div>
        
     <?php endwhile;endif;wp_reset_postdata(); ?>
-    <div class="num"></div>
+    <!--<div class="num"></div>-->
 </div>
 </section>
 <section>
@@ -129,4 +129,5 @@
         <div class="clear"></div>
     </div><!--map container-->
 </section>
+
 <?php get_footer(); ?>

@@ -519,6 +519,8 @@ figcaption {
 	margin: 1.6rem 0 10rem 0;
 }
 .blue {
+
+
 	font-family: 'Proxima-Nova-Samibold', Arial, Helvetica, sans-serif;
 	color: #2AAAE2;
 }
@@ -707,6 +709,7 @@ header {
 .header-banner-img .white-logo .logo-mark{
   width: 64px;
   position: fixed;
+  position: absolute;
 }
 .header-banner-img .white-logo .logo-mark img{
   opacity: 1;
@@ -1032,7 +1035,7 @@ a.banner-bottom-link .fa-angle-down {
     float: left;
     width: 49%;
     margin-right: 2%;
-    min-height: 700px;
+    min-height: 512px;
     position: relative;
     padding: 5rem;
     box-sizing: border-box;
@@ -1133,11 +1136,22 @@ a.banner-bottom-link .fa-angle-down {
 .about-intro .technology-services{
     text-align:  center;
 }
+.page-template-template-shipper  .shipper-intro .technology-intro-text {
+    width: 68%;
+    float: left;
+}
+.page-template-template-shipper  .shipper-intro .about-intro .technology-services {
+    float: right;
+    width: 30%;
+}
 .about-intro .technology-services img {
-    margin: 3rem 0 0 0;
+    margin: 3rem 1.5rem 0 1.5rem;
 }
 .page-template-template-carriers .about-intro .technology-services img {
     margin: 0rem 2.5rem 0 2.5rem;
+}
+.about-intro .technology-services .technology-services-img img {
+    margin: 3rem 0 0 0;
 }
 .technology-services-img {
     width: 48%;
@@ -1558,6 +1572,11 @@ Shippers Page
 .shipper-page-animation-svg{
     margin-left: 5.5rem;
     margin-bottom: 5rem;
+}
+.shipper-page-animation-svg svg {
+    width: 70%;
+    position: relative;
+    top: 104px;
 }
 .right-distance {
 	padding: 8.5rem 25rem 8.5rem 9rem;
@@ -2035,6 +2054,11 @@ span.post-date {
 /*******************************************************
 Careers
 ********************************************************/
+
+.page-template-template-careers .white-logo {
+  display: none;
+}
+
 .xl-wrapper {
     max-width: 1700px;
     width: 90%;
@@ -2093,6 +2117,7 @@ Careers
     position: relative;
     z-index: 1;
 }
+
 
 .career-banner-images {
     position: relative;
@@ -2436,10 +2461,44 @@ Single Resource
     margin-bottom: 0;
 }
 
-
-
-
-
+.metrics-count-box {
+    width: 50%;
+    padding: 5rem 6rem;
+    box-sizing: border-box;
+    float: left;
+    border: 1px solid #2aaae2;
+	display: table;
+}
+.metrics-count-box:nth-child(2n+2) {
+    border-left: 0px;
+}
+.metrics-count-box:nth-child(3), .metrics-count-box:nth-child(4), .metrics-count-box:nth-child(5),.metrics-count-box:nth-child(6) {
+    border-top: 0px;
+}
+.metrics-text {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-family: 'Proxima-Nova-Bold', Arial, Helvetica, sans-serif;
+    text-align: left;
+    vertical-align: middle;
+    display: table-cell;
+  letter-spacing: 3px;
+  line-height: 1.6;
+  padding-left: 2.5rem;
+  width: 60%;
+}
+.metrics-count {
+    font-size: 6rem;
+    color: #2aaae2;
+    text-transform: uppercase;
+    font-family: 'Proxima-Nova-Bold', Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    text-align: right;
+    display: table-cell;
+    box-sizing: border-box;
+  vertical-align: middle;
+  width: 40%;
+}
 
 
 
@@ -2872,7 +2931,7 @@ Wordpress Core
 .outer-menu {
 	display: none;
 }
-.mobile-show, .technology-accordion {
+.mobile-show/*, .technology-accordion*/ {
 	display: none;
 }
 
@@ -2889,6 +2948,9 @@ Responsive Design
 
 
 @media only screen and (min-width:2540px) and (max-width:7000px) {
+.technology-accordion {
+    display: none;
+}
 }
 @media only screen and (min-width:1900px) and (max-width:2539px) {
 /*
@@ -2900,13 +2962,21 @@ Responsive Design
     .about-slider.owl-carousel .owl-stage{
         padding-left: 0px !important;
     }
+  .technology-accordion {
+    display: none;
+}
 }
 @media only screen and (min-width:1660px) and (max-width:1899px) {  
-
+.technology-accordion {
+    display: none;
+}
 }
 @media only screen and (min-width:1420px) and (max-width:1659px) {
 .map-heading {
     padding: 17rem 0 0 0;
+}
+  .technology-accordion {
+    display: none;
 }
 .about-slider.owl-carousel .owl-stage {
     padding-left: 0px !important;
@@ -2926,16 +2996,25 @@ Responsive Design
   .featured-box-content {
     min-height: 463px;
 }
+.featured-box {
+    min-height: 563px;
+}
 }
 @media only screen and (min-width:1420px) and (max-width:1500px) {
 .single-page-wrapper .quote-area {
     width: 80vw;
     left: -21%;
 }
+  .technology-accordion {
+    display: none;
+}
 }
 @media only screen and (min-width:1346px) and (max-width:1419px) {
 .slider-image {
     min-height: 400px;
+}
+  .technology-accordion {
+    display: none;
 }
 .featured-box-content {
     padding: 6rem 6rem;
@@ -2983,6 +3062,9 @@ blockquote p {
     width: 80vw;
     left: -15%;
 }
+.featured-box {
+    min-height: 563px;
+}
 }
 @media only screen and (min-width:1004px) and (max-width:1259px) { 
 .technology-accordion {
@@ -3016,6 +3098,7 @@ blockquote p {
 blockquote p {
     font-size: 3rem;
 }
+
 }
 @media only screen and (min-width:1004px) and (max-width:1345px) {
     .slider-image {
@@ -3145,6 +3228,9 @@ blockquote {
 .quote-area blockquote {
     padding: 7.5rem 7rem 7.5rem 7rem;
 }
+.featured-box {
+    min-height: 594px;
+}
 }
 @media only screen and (min-width:1260px) and (max-width:1345px) { 
     span#homepage-first-scroll-section {
@@ -3232,7 +3318,7 @@ span.menu-item-description {
     float: none;
     width: 100%;
     margin-right: 0;
-    min-height: 540px;
+    min-height: 368px;
 	margin-bottom: 20px;
 	padding: 20px;
 }
@@ -3518,7 +3604,7 @@ span.menu-item-description {
     float: none;
     width: 100%;
     margin-right: 0;
-    min-height: 540px;
+    min-height: 330px;
 	margin-bottom: 20px;
 	padding: 20px;
 }
@@ -3907,6 +3993,28 @@ ul li.gfield.half-input-field,.ginput_container_address span {
     float: none;
     margin-right: 0;
 }
+.page-template-template-shipper .shipper-intro .about-intro .technology-services, .page-template-template-shipper .shipper-intro .technology-intro-text {
+    float: none;
+    width: 100%;
+}    
+}
+@media only screen and (max-width:900px) {
+.metrics-count-box {
+    width: 100%;
+    float: none;
+	display: table;
+}
+.metrics-count-box:nth-child(2n+2) {
+    border: 1px solid #2aaae2;
+	border-top:0px;
+}	
+.metrics-count {
+    width: 30%;
+    text-align: unset;
+}
+.metrics-text br {
+	display: none;
+}
 }
 @media only screen and (min-width:580px) and (max-width:747px) {
     span#homepage-first-scroll-section {
@@ -3946,6 +4054,9 @@ ul li.gfield.half-input-field,.ginput_container_address span {
 }
 .banner-content-buttons a.button-fill, .banner-content-buttons a.button, .banner-content-buttons .button-white {
     margin-bottom: 10px;
+}
+.featured-box {
+    min-height: 385px;
 }
 }
 @media only screen and (max-width:459px) {
@@ -4000,6 +4111,9 @@ ul li.gfield.half-input-field,.ginput_container_address span {
 .banner-content-buttons a.button-fill, .banner-content-buttons a.button, .banner-content-buttons .button-white {
     margin-bottom: 10px;
 }
+.featured-box {
+    min-height: 420px;
+}
 }
 @media only screen and (min-width:300px) and (max-width:390px) {
     span#homepage-first-scroll-section {
@@ -4040,6 +4154,9 @@ ul li.gfield.half-input-field,.ginput_container_address span {
 .banner-content-buttons a.button-fill, .banner-content-buttons a.button, .banner-content-buttons .button-white {
     margin-bottom: 10px;
 }
+.featured-box {
+    min-height: 560px;
+}
 }
 
 .custom-gform-link {
@@ -4047,3 +4164,5 @@ ul li.gfield.half-input-field,.ginput_container_address span {
     top: -15px;
     left: 60px;
 }
+
+

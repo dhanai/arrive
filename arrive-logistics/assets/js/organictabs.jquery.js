@@ -11,7 +11,7 @@
             base.options = $.extend({},$.organicTabs.defaultOptions, options);
             
             // Accessible hiding fix
-            $(".hide").css({
+            $(".hide-tabs").css({
                 "position": "relative",
                 "top": 0,
                 "left": 0,

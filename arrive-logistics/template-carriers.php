@@ -13,6 +13,12 @@
         	<?php if( have_rows('apsb_images') ):  while ( have_rows('apsb_images') ) : the_row(); ?>
             	<img src="<?php the_sub_field('image'); ?>" alt="" />
             <?php endwhile;endif;wp_reset_postdata(); ?> 
+            
+            <?php if( have_rows('apsb_count_box') ):  while ( have_rows('apsb_count_box') ) : the_row(); ?>
+              <div class="metrics-count-box">
+                <div class="metrics-count"><span><?php the_sub_field('value'); ?></span><?php the_sub_field('unit'); ?></div><div class="metrics-text"><?php the_sub_field('title'); ?></div>
+              </div>
+              <?php endwhile;endif;wp_reset_postdata(); ?>
         </div><!--technology services-->
         <div class="clear"></div>
     </div><!--m wrapper-->
@@ -116,3 +122,25 @@ ks.animate("#Path-7",[{p:'strokeDashoffset',t:[0,1500,3500,6000],v:[525,525,0,0]
     </div><!--map container-->
 </section>
 <?php get_footer(); ?>
+<script>
+  jQuery(document).ready(function ($) {
+    
+      jQuery('.metrics-count span').each(function ($) {
+		jQuery(this).prop('Counter',0).animate({
+			Counter: jQuery(this).text()
+		}, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            jQuery(this).text(Math.ceil(now));
+        }
+    });
+});
+    
+   
+  });
+
+
+
+
+</script>
