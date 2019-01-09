@@ -18,7 +18,6 @@ var templateUrl = '<?= get_bloginfo("template_url"); ?>';
 			 add_action( 'wp_head', 'theme_slug_render_title' );
 			}
 		?>
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>

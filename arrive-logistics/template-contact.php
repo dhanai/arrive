@@ -30,8 +30,8 @@
 </section>
 <section>
 	<div class="wrapper">
+       <h2 class="section-headline"><?php the_field('cols_headline'); ?></h2>
     	<div class="location-container">
-        	<h2 class="section-headline"><?php the_field('cols_headline'); ?></h2>
         	<?php if( have_rows('ls_location') ):  while ( have_rows('ls_location') ) : the_row(); ?>
             <div class="location">
             	<div class="location-image">
@@ -41,8 +41,8 @@
                 <?php the_sub_field('address'); ?>
             </div><!--location-->
             <?php endwhile;endif;wp_reset_postdata(); ?> 
-            <div class="clear"></div>
         </div><!--location container-->
+        <div class="clear"></div>
     </div><!--wrapper-->
 </section>
 <?php get_footer(); ?>

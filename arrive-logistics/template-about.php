@@ -27,8 +27,12 @@
         </div><!--technology intro text-->
         <div class="technology-services">
         	<?php if( have_rows('apsb_images') ):  while ( have_rows('apsb_images') ) : the_row(); ?>
-            	<img src="<?php the_sub_field('image'); ?>" alt="" />
+               <div class="technology-services-img">
+                   <img src="<?php the_sub_field('image'); ?>" alt="" />
+               </div>
+               <!-- /.technology-services-img -->
             <?php endwhile;endif;wp_reset_postdata(); ?> 
+            <div class="clear"></div>
         </div><!--technology services-->
         <div class="clear"></div>
     </div><!--m wrapper-->
@@ -58,7 +62,7 @@
             </div>
         </div><!--big wrapper-->
     </section>
-<section class="section-mrg">
+<section class="section-mrg" id="about-team-section" style="display: none;">
     <div class="wrapper">
         <h2 class="section-headline"><?php the_field('tb_headline'); ?></h2>
         <div class="our-team">

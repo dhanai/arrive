@@ -80,14 +80,15 @@
 <div class="banner-area section-mrg">
     <div class="xl-wrapper">
         <div class="career-banner-content banner-content ">
-            <h1 class="heading slide-up-animation-delay"><?php the_field( 'cp_mh_headline'); ?></h1>
-            <p class="slide-up-animation-delay"><?php the_field( 'cp_mh_sub_headline'); ?></p>
-            <a href="#current-opening" class="button-fill slide-up-animation-delay">Jump to Openings <i class="fa fa-angle-down"> </i></a>
+            <h1 class="heading"><?php the_field( 'cp_mh_headline'); ?></h1>
+            <p class=""><?php the_field( 'cp_mh_sub_headline'); ?></p>
+            <a href="#current-opening" class="button-fill">Jump to Openings <i class="fa fa-angle-down"> </i></a>
             <?php $cp_mh_button = get_field('cp_mh_button'); ?>
-        	<?php if($cp_mh_button['url']){ ?><a href="<?php echo $cp_mh_button['url']; ?>" class="button slide-up-animation-delay mfp-iframe" <?php if($cp_mh_button['target']){ ?>target="<?php echo $cp_mh_button['target']; ?>"<?php } ?>><?php echo $cp_mh_button['title']; ?> <i class="fa fa-play-circle"></i></a><?php } ?>
+        	<?php if($cp_mh_button['url']){ ?><a href="<?php echo $cp_mh_button['url']; ?>" class="button mfp-iframe" <?php if($cp_mh_button['target']){ ?>target="<?php echo $cp_mh_button['target']; ?>"<?php } ?>><?php echo $cp_mh_button['title']; ?> <i class="fa fa-play-circle"></i></a><?php } ?>
+          <div class="clear"></div>
         </div>
         <!-- /.carer-banner-contet -->
-        <div class="clear"></div>
+        
         <div class="career-banner-images">
         	<?php $cntcp=0; if( have_rows('cp_mh_image') ):  while ( have_rows('cp_mh_image') ) : the_row();$cntcp++; ?>
                 <div class="career-banner-img career-img<?php echo $cntcp; ?>" style="background-image: url(<?php the_sub_field('image'); ?>)"></div>

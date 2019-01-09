@@ -23,6 +23,15 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($) {
 	$("#example-one").organicTabs();
+  
+    
+$('.banner-bottom-link').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+});
+  
 });
 
 var owl = jQuery('.about-slider');
@@ -174,7 +183,7 @@ jQuery(window).scroll(function($){
     var inView = elementInViewport( jQuery('.map-container') );
 
     if (!mapOn && inView){
-        jQuery('.map-area').append('<iframe src="'+templateUrl+'/assets/map/map.html" width="100%" height="400"></iframe>');
+        jQuery('.map-area').append('<iframe src="'+templateUrl+'/assets/map/map.html" width="100%" height="400"></iframe');
         mapOn = true;
     }
   }
