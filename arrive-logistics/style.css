@@ -2728,9 +2728,13 @@ ul.gfield_radio {
 select {
 	-webkit-appearance: none;
 	background: url(assets/images/select-bg.png) no-repeat 96% center;
-	color: #b5b5b5;
+	color: #464646;
 	opacity: 1;
 	cursor: pointer;
+}
+
+select option:checked{
+  color:#464646;
 }
 textarea {
     padding: 2.5rem 2rem;
