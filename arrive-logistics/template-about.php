@@ -5,16 +5,26 @@
 <section class="section-mrg">
     <div class="we-work-with d-hide">
        <ul>
-       		 <?php 
+       	<?php 
         $location_detail =  get_field('carriers_value_bullet', 'option');
      
-            if(!empty($location_detail[0])){
-        $i = 0;
+        if(!empty($location_detail[0])){
+            $i = 0;
         while( (!empty($location_detail[$i]) ) ){ ?>
-           
             <li><?php echo $location_detail[$i][title]; ?></li>
-             <?php $i++; } ?>
-    <?php }  wp_reset_query();?>
+
+        <?php $i++; } ?>
+        <?php }  wp_reset_query();?>
+        <?php 
+        $location_detail =  get_field('carriers_value_bullet', 'option');
+     
+        if(!empty($location_detail[0])){
+            $i = 0;
+        while( (!empty($location_detail[$i]) ) ){ ?>
+            <li><?php echo $location_detail[$i][title]; ?></li>
+
+        <?php $i++; } ?>
+        <?php }  wp_reset_query();?>
        </ul>
     </div>
 </section>

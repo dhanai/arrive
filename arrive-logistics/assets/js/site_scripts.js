@@ -125,16 +125,6 @@ jQuery(document).ready(function($) {
         }, 700);
         event.preventDefault();
     });
-
-
-    //animate logo
-    setTimeout(function(){
-      $('.logo-mark').removeClass('hide');
-    }, 1000);
-    setTimeout(function(){
-      $('.logo-type').removeClass('hide');
-    }, 1500)
-    
 });
 
 // var slideCounter = function(){
@@ -146,27 +136,39 @@ jQuery(document).ready(function($) {
 // }
 
 
+//animate logo on opening
+jQuery(document).ready(function($) {
+    setTimeout(function(){
+      $('.logo-mark').removeClass('hide');
+    }, 0);
+    setTimeout(function(){
+      $('.logo-type').removeClass('hide');
+    }, 500)
+});
+
 /* ========================================== 
 scrollTop() >= 300
 Should be equal the the height of the header
 ========================================== */
 jQuery(window).scroll(function($){
-    // if (jQuery(window).scrollTop() >= 350) {
-    //     jQuery('header').addClass('unfixed-header');
+
+    //slide in logo type
+    // if (jQuery(window).scrollTop() >= 1) {
+    //   jQuery('.logo-type').addClass('hide');
     // }
     // else {
-    //     jQuery('header').removeClass('unfixed-header');
+    //   jQuery('.logo-type').removeClass('hide');
     // }
 
+    //add fixed header
     if (jQuery(window).scrollTop() >= 200) {
         jQuery('header').addClass('fixed-header');
-        //jQuery('header').removeClass('unfixed-header');
     }
     else {
         jQuery('header').removeClass('fixed-header');
-        
     }
 
+    //fade in fixed header based on scroll position
     var fadeStart = 200;
     var fadeUntil = 300;
     var fading = jQuery('header');
@@ -182,23 +184,22 @@ jQuery(window).scroll(function($){
     }else if( offset > fadeUntil){
       opacity = 1;
     }
-
-    var translateStart = 0;
-    var translateUntil = 200;
-
-    if( offset <= translateStart ){
-      translate = 0;
-    }else if( offset>= translateStart && offset <= translateUntil ){
-      translate = (0 + (offset - translateStart) / (translateUntil - translateStart)) * 20;
-    }
-
     fading.css('opacity',opacity);
-    logo.style.transform = "translateY(-"+translate+"px)";
 
+    // var translateStart = 0;
+    // var translateUntil = 200;
+
+    // if( offset <= translateStart ){
+    //   translate = 0;
+    // }else if( offset>= translateStart && offset <= translateUntil ){
+    //   translate = (0 + (offset - translateStart) / (translateUntil - translateStart)) * 20;
+    // }
+    //logo.style.transform = "translateY(-"+translate+"px)";
 
 });
 
 var mapOn = false;
+//var bounceOn = false;
 
 function elementInViewport(el) {
   //special bonus for those using jQuery
@@ -225,7 +226,22 @@ jQuery(window).scroll(function($){
         mapOn = true;
     }
   }
+
+  //shipper page bounce ball animation
+
+  //jQuery('.shipper-page-animation-svg svg').pauseAnimation();
+
+  // if(jQuery('.video-area').length > 0){
+  //   var inView = elementInViewport( jQuery('.video-area') );
+
+  //   if (!bounceOn && inView){
+  //       jQuery('.shipper-page-animation-svg').addClass('show-svg-class');
+  //       bounceOn = true;
+  //   }
+  // }
 });
+
+
 
 
 
@@ -398,14 +414,14 @@ jQuery(document).ready(function($){
   }
 });
 
-//
-//    jQuery(document).on('scroll', function($) {
-//        if(jQuery(this).scrollTop() + jQuery('#shippers-page-benefits').innerHeight() >=jQuery('#shippers-page-benefits').position().top){
-//            jQuery(".shipper-page-animation-svg svg").addClass( "show-svg-class" );
-//            console.log("Scroll triggered");
-//        } 
-//        
-//    });
+
+// jQuery(document).on('scroll', function($) {
+//    if(jQuery(this).scrollTop() + jQuery('#shippers-page-benefits').innerHeight() >=jQuery('#shippers-page-benefits').position().top){
+//        jQuery(".shipper-page-animation-svg svg").addClass( "show-svg-class" );
+//        console.log("Scroll triggered");
+//    } 
+   
+// });
 
 //    jQuery(document).on('scroll', function($) {
 //        if(jQuery(this).scrollTop()>=jQuery('#shippers-page-benefits').position().top){
@@ -433,6 +449,45 @@ jQuery(document).ready(function($){
 //    window.onscroll = null;
 //  }
 //}
+
+
+var countPlayed = false
+//carriers page
+jQuery(document).ready(function ($) {
+
+  if(jQuery('.page-template-template-carriers').length > 0){
+
+    var animateCounter = function(){
+      if(jQuery('.technology-services').length > 0){
+        var inView = elementInViewport( jQuery('.technology-services') );
+
+        if (!countPlayed && inView){
+            jQuery('.metrics-count span').each(function ($) {
+                jQuery(this).prop('Counter',0).animate({
+                    Counter: jQuery(this).text()
+                    }, {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function (now) {
+                        jQuery(this).text(Math.ceil(now));
+                    }
+                });
+            });
+            countPlayed = true;
+        }
+      }
+    }
+
+    jQuery(window).scroll(function($){
+      animateCounter();
+    });
+
+    animateCounter();
+
+  }
+
+});
+
 
 jQuery(document).ready(function($){
      // JavaScript
@@ -513,7 +568,7 @@ jQuery(document).ready(function($){
 			origin: 'right'
           }
          
-          sr.reveal('.slide-up-animation-delay',       slide_up_animation_delay);
+          //sr.reveal('.slide-up-animation-delay',       slide_up_animation_delay);
   				sr.reveal('.header-animation',                 header_anim);
           sr.reveal('.slide-left-animation',             slide_left_animation);
           sr.reveal('.slide-left-animation-delay',       slide_left_animation_delay);
@@ -531,6 +586,3 @@ jQuery(document).ready(function($){
   sr.reveal('.slideup-two', {  duration: 1500, delay: 1500, origin: 'bottom',distance: '100px',scale    : 1 }, 80);
 
  });
-
-
-

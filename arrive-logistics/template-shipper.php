@@ -3,7 +3,7 @@
  get_header();
 ?>
 <div class="page-wrapper">
-  <section class="section-mrg shipper-intro ">
+  <section class="shipper-intro ">
     <div class="m-wrapper about-intro">
         <div class="technology-intro-text">
             <h2 class="section-headline"><?php the_field('apsb_headline'); ?></h2>
@@ -65,7 +65,7 @@
         </div><!-- /.our-feature area -->
         <!-- /.shippers-page-accordion -->
     </section>
-    <section class="section-mrg">
+    <section>
         <div class="big-wrapper">
             <div class="video-area">
                 <div class="video-box" style="background-image: url(<?php the_field('tp_aub_image'); ?>);">
@@ -81,7 +81,7 @@
     	</div><!--big wrapper-->
     </section>
     <section>
-        <div class="wrapper">
+        <div class="m-wrapper">
          <div class="shipper-page-animation-svg svg-adj">
              
          
@@ -93,6 +93,7 @@
     <ellipse id="Oval" fill="#2AAAE2" rx="7.5" ry="7.5" stroke="none" stroke-width="1" fill-rule="evenodd" opacity="0" transform="translate(0,1) translate(7.5,133.5)" style="opacity: 1;"></ellipse>
     <ellipse id="Oval-Copy" fill="#2AAAE2" rx="7.5" ry="7.5" stroke="none" stroke-width="1" fill-rule="evenodd" opacity="0" transform="translate(0,1) translate(470.5,133.5)" style="opacity: 1;"></ellipse>
     <ellipse id="Oval-Copy-2" fill="#2AAAE2" rx="7.5" ry="7.5" stroke="none" stroke-width="1" fill-rule="evenodd" opacity="0" transform="translate(0,1) translate(933.5,133.5)" style="opacity: 1;"></ellipse>
+
     <script>window.ks=function(){function z(a){return"undefined"!==typeof a}function v(a,b){return a&amp;&amp;0==a.indexOf(b)}function N(a){if(!isFinite(a))throw"non-finite value";}function O(a){if(14&gt;=a)return 16;(a=X[a])||(a=0);return a}function D(a){return 0&lt;=a?Math.pow(a,1/3):-Math.pow(-a,1/3)}function Y(a,b,c,d){if(0==a)return 0==b?b=-d/c:(a=Math.sqrt(c*c-4*b*d),d=(-c+a)/(2*b),0&lt;=d&amp;&amp;1&gt;=d?b=d:(d=(-c-a)/(2*b),b=0&lt;=d&amp;&amp;1&gt;=d?d:0)),b;var e=c/a-b*b/(a*a)/3;c=b*b*b/(a*a*a)/13.5-b*c/(a*a)/3+d/a;var k=c*c/4+e*e*e/27;b=-b/
 (3*a);if(0&gt;=k){if(0==e&amp;&amp;0==c)return-D(d/a);a=Math.sqrt(c*c/4-k);d=Math.acos(-c/2/a);c=Math.cos(d/3);d=Math.sqrt(3)*Math.sin(d/3);a=D(a);e=2*a*c+b;if(0&lt;=e&amp;&amp;1&gt;=e)return e;e=-a*(c+d)+b;if(0&lt;=e&amp;&amp;1&gt;=e)return e;e=a*(d-c)+b;if(0&lt;=e&amp;&amp;1&gt;=e)return e}else{a=D(-c/2+Math.sqrt(k));c=D(-c/2-Math.sqrt(k));d=a+c+b;if(0&lt;=d&amp;&amp;1&gt;=d)return d;d=-(a+c)/2+b;if(0&lt;=d&amp;&amp;1&gt;=d)return d}return 0}function Z(a,b){if(48==a&amp;&amp;"number"===typeof b)return"#"+("000000"+b.toString(16)).substr(-6);if(64==a)return b=b.map(function(a){return a+
 "px"}),b.join(",");if(96==a){a="";for(var c=b.length,d=0;d&lt;c;d+=2)a+=b[d],a+=b[d+1].join(",");return a}if(80==a){if(0==b[0])return"none";a="";c=b.length;for(d=0;d&lt;c;)a+=R[b[d]],1==b[d]?a+="("+b[d+1]+") ":5==b[d]?(a+="("+b[d+1]+"px "+b[d+2]+"px "+b[d+3]+"px rgba("+(b[d+4]&gt;&gt;&gt;24)+","+(b[d+4]&gt;&gt;16&amp;255)+","+(b[d+4]&gt;&gt;8&amp;255)+","+(b[d+4]&amp;255)/255+")) ",d+=3):a=2==b[d]?a+("("+b[d+1]+"px) "):7==b[d]?a+("("+b[d+1]+"deg) "):a+("("+(0&gt;b[d+1]?0:b[d+1])+") "),d+=2;return a}return 32==a?b+"px":b}function w(a){return 0&gt;=
@@ -124,6 +125,7 @@ ks.animate("#Path-7",[{p:'strokeDashoffset',t:[0,1500,3500,6000],v:[525,525,0,0]
 {autoplay:document.location.search.substr(1).split('&amp;').indexOf('autoplay=false')&lt;0})
 })(ks);
 </script>
+
 </svg>
           
           </div>
@@ -149,7 +151,7 @@ ks.animate("#Path-7",[{p:'strokeDashoffset',t:[0,1500,3500,6000],v:[525,525,0,0]
                     <div class="clear"></div>
                 </div><!--benefit-icon-container-->
             </div><!--benefit-container-->
-        </div><!--wrapper-->
+        </div><!--m-wrapper-->
     </section>
     <section>    
     	<div class="big-wrapper"> 

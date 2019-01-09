@@ -122,25 +122,3 @@ ks.animate("#Path-7",[{p:'strokeDashoffset',t:[0,1500,3500,6000],v:[525,525,0,0]
     </div><!--map container-->
 </section>
 <?php get_footer(); ?>
-<script>
-  jQuery(document).ready(function ($) {
-    
-      jQuery('.metrics-count span').each(function ($) {
-		jQuery(this).prop('Counter',0).animate({
-			Counter: jQuery(this).text()
-		}, {
-        duration: 4000,
-        easing: 'swing',
-        step: function (now) {
-            jQuery(this).text(Math.ceil(now));
-        }
-    });
-});
-    
-   
-  });
-
-
-
-
-</script>
