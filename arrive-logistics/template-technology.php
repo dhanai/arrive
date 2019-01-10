@@ -10,7 +10,7 @@
             <div class="technology-intro">
                 <div class="technology-intro-text">
                     <h2 class="section-headline"><?php the_field('tpsb_default_headline'); ?></h2>
-                    <p><?php the_field('tpsb_default_content'); ?></p>
+                    <?php the_field('tpsb_default_content'); ?>
                 </div>
             </div><!--technology intro text-->
         </div>
@@ -106,7 +106,35 @@
     <section>    
     	<div class="big-wrapper"> 
             <div class="quote-area">
-               <div class="quote-image mobile-show" style="background-image: url(<?php the_field('tp_qb_image'); ?>);"></div><!--quote image-->
+               <div class="quote-image mobile-show" style="background-image: url(<?php 
+
+                $image = get_field('tp_qb_image');
+
+                if( !empty($image) ): 
+
+                    // vars
+                    $url = $image['url'];
+                    $title = $image['title'];
+                    $alt = $image['alt'];
+                    $caption = $image['caption'];
+
+                    // thumbnail
+                    $size = 'techpage-thumbnail';
+                    $thumb = $image['sizes'][ $size ];
+                    $width = $image['sizes'][ $size . '-width' ];
+                    $height = $image['sizes'][ $size . '-height' ];
+              
+              ?>
+               
+               <?php echo $thumb; ?>
+                
+               
+              
+                
+                <?php endif; ?>
+                    
+                        
+                    );"></div><!--quote image-->
                 <blockquote style="background-color: transparent;">
                     <h6><?php the_field('tp_qb_headline'); ?></h6>
                     <p> <?php the_field('tp_qb_quote'); ?> </p>

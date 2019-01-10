@@ -39,7 +39,7 @@
 </div>
 </section>
 <section>
-        <div class="wrapper">
+        <div class="m-wrapper">
            
          <div class="shipper-page-animation-svg">
              
@@ -107,7 +107,7 @@ ks.animate("#Path-7",[{p:'strokeDashoffset',t:[0,1500,3500,6000],v:[525,525,0,0]
                     <div class="clear"></div>
                 </div><!--benefit-icon-container-->
             </div><!--benefit-container-->
-        </div><!--wrapper-->
+        </div><!--m-wrapper-->
     </section>
 <section>
     <div class="map-container">

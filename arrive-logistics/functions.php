@@ -88,6 +88,7 @@ register_nav_menus( array(
 		'main' => __( 'Main Menu', '' ),
 		'footer-left' => __( 'Footer Left Menu', '' ),
 		'footer-right' => __( 'Footer Right Menu', '' ),
+		'mobile-menu' => __( 'Mobile Menu', '' ),
 	) );
 }
 

@@ -90,7 +90,7 @@ var templateUrl = '<?= get_bloginfo("template_url"); ?>';
                 <div>
                     <div>
                         <div class="mobile-main-menu">
-                            <?php wp_nav_menu( array( 'theme_location' => 'main','fallback_cb'=> 'fallbackmenu1' ) ); ?>
+                            <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu','fallback_cb'=> 'fallbackmenu1' ) ); ?>
                         </div><!--main menu-->
                         <div class="request-btn">
                             <?php $header_button = get_field('header_button','option'); ?>
