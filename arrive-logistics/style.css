@@ -472,7 +472,7 @@ Layout Styling
     display: block;
 } 
 .single .page-wrapper,
-.page .page-wrapper{
+.page-child .page-wrapper{
 	padding-top: 0px;
 }
 .heading {
@@ -2081,6 +2081,7 @@ Careers
 ********************************************************/
 
 .page-template-template-careers .white-logo,
+.page-template-template-contact .white-logo,
 .page-template-template-blog .white-logo,
 .post-template-default .white-logo,
 .page-template-default .white-logo {
