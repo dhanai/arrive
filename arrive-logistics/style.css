@@ -2215,7 +2215,8 @@ Careers
 .career-page .our-feature-icon img, .our-feature .our-feature-icon img {
     max-width: 116%;
     position: absolute;
-    left: -7px;
+    left: 50%;
+    transform: translateX(-50%);
     right: 0;
     top: 0;
     bottom: 0;
