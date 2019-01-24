@@ -2096,6 +2096,9 @@ Careers
 .career-banner-content a.button-fill, .career-banner-content a.button, .career-banner-content .button-white {
 	float: left;
 }
+.page-template-default .page-wrapper.banner-area {
+    padding-top: 0;
+}
 .owl-dots {
     /*counter-reset: slides-num;*/
     position: absolute;
@@ -3675,6 +3678,9 @@ blockquote {
 .our-main-features {
 		display: none;
 }*/
+.home .banner-headline span.hover-eff:after {
+    height: 3px;
+}
   .map-area {
     float: none;
     width: 100%;
