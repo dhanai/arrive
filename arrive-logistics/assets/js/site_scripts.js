@@ -212,7 +212,7 @@ function elementInViewport(el) {
   return (
       rect.top >= 0 &&
       rect.left >= 0 &&
-      rect.bottom - 300 <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+      rect.bottom - 500 <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
       rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
   );
 }
@@ -223,7 +223,7 @@ jQuery(window).scroll(function($){
     console.log(inView)
 
     if (!mapOn && inView){
-        jQuery('.map-area').append('<iframe src="'+templateUrl+'/assets/map/map.html" width="100%" height="400"></iframe');
+        jQuery('.map-area').append('<iframe src="'+templateUrl+'/assets/map/v2/demo.html" width="100%" height="400"></iframe');
         mapOn = true;
     }
   }

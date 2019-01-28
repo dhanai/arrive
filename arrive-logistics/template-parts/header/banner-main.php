@@ -202,7 +202,8 @@ if($pmh_image==''){$pmh_image = wp_get_attachment_url( get_post_thumbnail_id($po
     </div><!--s wrapper-->
     <?php if($pmh_image){ ?>
          <div class="m-wrapper resource-featured-img">
-           <div class="single-post-image" style="background: url(<?php echo $pmh_image; ?>); background-size: cover; "></div>
+           <!-- <div class="single-post-image" style="background: url(<?php echo $pmh_image; ?>); background-size: cover; "></div> -->
+           <img src="<?php echo $pmh_image; ?>" alt=""/>
            <!-- /.single-post-image -->
             <img src="" alt=""/>
         </div>
